@@ -1,11 +1,21 @@
-# hide-screen
+# 🕶️ Hide-Screen
 
-Press a hotkey and the screen turns black. This can be useful to quickly hide your screen. This uses autohotkey https://www.autohotkey.com
+Press a hotkey to instantly:
 
-## Setup
+- Turn all screens black  
+- Block mouse input  
+- Disable certain keyboard keys  
 
-### Download AutoHotkey
+Perfect for quickly hiding your screen. Built using [AutoHotkey](https://www.autohotkey.com).
 
-To get started, you'll need to download and install AutoHotkey from https://www.autohotkey.com
+---
 
-When installed you can run the hide.ahk
+## 🚀 Setup
+
+### 1. Download AutoHotkey
+Go to [https://www.autohotkey.com](https://www.autohotkey.com) and install AutoHotkey.
+
+### 2. Run the Script
+After installation, double-click `hide.ahk` to launch the script.
+
+That's it, the hotkey is now active.
