@@ -7,11 +7,15 @@ blackWindows := []
     isBlack := !isBlack
 
     if (isBlack) {
-        ; Destroy any existing black windows
         for index, guiName in blackWindows {
             Gui, %guiName%:Destroy
         }
         blackWindows := []
+
+        SysGet, MonitorInfo, Monitor, 1  ; Get info for the primary monitor
+        x := MonitorInfoRight - 1        ; Bottom-right X coordinate (subtract 1 to stay within bounds)
+        y := MonitorInfoBottom - 1       ; Bottom-right Y coordinate (subtract 1 to stay within bounds)
+        MouseMove, %x%, %y%
 
         SysGet, MonitorCount, MonitorCount
 
@@ -32,6 +36,8 @@ blackWindows := []
             blackWindows.Push(guiName)
         }
     } else {
+        MouseMove, A_ScreenWidth // 2, A_ScreenHeight // 2  ; Move the cursor to the center of the primary screen
+
         for index, guiName in blackWindows {
             Gui, %guiName%:Destroy
         }
